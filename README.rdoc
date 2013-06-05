@@ -17,18 +17,21 @@ An age is how many time an object survive from GarbageCollect.
 
 == USAGE:
 
-  ObjSpace::Age.enable
+  # /tmp/a.rb
+  require 'objspace/age'
+  
+  ObjectSpace::Age.enable
   a = []
   1_000_000.times{ a << 'b' }
-  ObjSpace::Age.stats_on(:class)
-  # => [{String: 100..}...] # an array index indicates an age
-  ObjSpace::Age.stats_on(:line)
-  # => [{age: 1, '/tmp/a.rb:2': 100..}...]
-  ObjSpace::Age.how_old(a)
-  # => 4
-  ObjSpace::Age.where(a)
-  # => '/tmp/a.rb:2'
-  ObjSpace::Age.disable
+  ObjectSpace::Age.stats_on(:class)  # an array index indicates an age
+  # => [nil, nil, nil, nil, {String=>30309} ...
+  ObjectSpace::Age.stats_on(:line)
+  # => [nil, nil, ... , nil, {"/tmp/a.rb:6"=>617}, ... {"/tmp/a.rb:6"=>278271}, 
+  ObjectSpace::Age.how_old(a)
+  # => 58
+  ObjectSpace::Age.where(a)
+  # => '/tmp/a.rb:5'
+  ObjectSpace::Age.disable
 
 == LICENSE:
 
