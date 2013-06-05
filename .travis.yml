@@ -1,0 +1,10 @@
+rvm:
+  - head
+
+script: rake test
+
+gemfile:
+  - Gemfile
+
+notifications:
+  email: authornari+travis@gmail.com
