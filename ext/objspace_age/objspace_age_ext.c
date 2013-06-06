@@ -271,7 +271,7 @@ Init_objspace_age_ext(void)
 
     rb_define_module_function(rb_mObjSpaceAge, "enable", start_age_trace_object_allocations, 0);
     rb_define_module_function(rb_mObjSpaceAge, "disable", stop_age_trace_object_allocations, 0);
-    rb_define_module_function(rb_mObjSpaceAge, "where", allocation_sourcefile_and_line, 1);
+    rb_define_module_function(rb_mObjSpaceAge, "birthplace", allocation_sourcefile_and_line, 1);
     rb_define_module_function(rb_mObjSpaceAge, "how_old", allocation_old, 1);
     rb_define_module_function(rb_mObjSpaceAge, "stats_on", age_stats, 1);
 }

@@ -14,10 +14,10 @@ class TestObjectSpaceAge < MiniTest::Unit::TestCase
     ObjectSpace::Age.disable
   end
 
-  def test_where
+  def test_birthplace
     ObjectSpace::Age.enable
     a = ''
-    assert_equal 'test/run-test.rb:19', ObjectSpace::Age.where(a)
+    assert_equal 'test/run-test.rb:19', ObjectSpace::Age.birthplace(a)
   ensure
     ObjectSpace::Age.disable
   end

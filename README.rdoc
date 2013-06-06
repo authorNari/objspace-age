@@ -31,7 +31,7 @@ An age is how many time an object survive from GarbageCollect.
   # => [nil, nil, ... , nil, {"/tmp/a.rb:6"=>617}, ... {"/tmp/a.rb:6"=>278271}, 
   ObjectSpace::Age.how_old(a)
   # => 58
-  ObjectSpace::Age.where(a)
+  ObjectSpace::Age.birthplace(a)
   # => '/tmp/a.rb:5'
   ObjectSpace::Age.disable
 
