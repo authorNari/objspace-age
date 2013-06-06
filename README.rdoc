@@ -13,6 +13,8 @@ An age is how many time an object survive from GarbageCollect.
 
 == FEATURES/PROBLEMS:
 
+* Show stats on age
+* You can detect memory leak easily
 * Support Ruby *2.1.0* or later
 
 == USAGE:
