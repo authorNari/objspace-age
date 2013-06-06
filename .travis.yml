@@ -1,5 +1,5 @@
 rvm:
-  - head
+  - ruby-head
 
 script: rake test
 
