@@ -126,7 +126,7 @@ stop_age_trace_object_allocations(VALUE objspace)
     st_free_table(arg->object_table);
     st_free_table(arg->str_table);
 
-    arg->newobj_trace = NULL;
+    arg->newobj_trace = (VALUE)NULL;
 
     return Qnil;
 }
